@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestione Studenti</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Form di Gestione Studenti</h1>
+   
+    <form id="studentForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="txt_name" required><br><br>
+
+        <label for="surname">Cognome:</label>
+        <input type="text" id="surname" name="txt_surname" required><br><br>
+
+        <label for="grades">Media voti:</label>
+        <input type="text" id="grades" name="txt_mean" required><br><br>
+
+        <button type="button" onclick="addStudent()">Aggiungi Studente</button>
+    </form>
+
+    <h2>Media di uno studente</h2>
+    <select id="studentSelect" onchange="showAverage()">
+        <option value="">Seleziona uno studente</option>
+    </select>
+
+    <p id="studentAverage"></p>
+</body>
+</html>
