@@ -31,3 +31,13 @@ function showAverage() {
     var selectedStudent = document.getElementById("studentSelect").value;
     message.innerHTML = JSON.stringify(students[selectedStudent]);
 }
+
+function classAverage() {
+    var media = 0;
+    var soma = 0;
+    for(var i = 0; i < students.length; i++) {
+        soma = soma + parseFloat(students[i].grade);
+    }
+    media = soma / students.length;
+    document.getElementById("classAverage").innerHTML = "La media voti è:" + media;
+}
