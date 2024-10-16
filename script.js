@@ -41,3 +41,15 @@ function classAverage() {
     media = soma / students.length;
     document.getElementById("classAverage").innerHTML = "La media voti è:" + media;
 }
+
+function cambiareDati() {
+        
+}
+
+function eliminareStudento() {
+    var numeroEliminare = document.getElementById("eliminato").value;
+    students.splice(numeroEliminare, 3);
+    console.log(students);
+    var x = document.getElementById("studentSelect");
+    x.remove(parseInt(numeroEliminare));
+}
