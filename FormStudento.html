@@ -31,8 +31,22 @@
     <p id="classAverage"></p>
 
     <h2>Eliminare studento</h2>
-    <label for="eliminato">Scrive numeto di studento di eliminare</label><br><br>
+    <label for="eliminato">Scrive numero di studento di eliminare</label><br><br>
     <input type="number" id="eliminato" name="txt_eliminare" step="1" min="1" required><br><br>
     <button type="button" onclick="eliminareStudento()">Eliminare</button>
+
+    <h2>Cambiare i dati di un studento</h2>
+    <label for="cambiare">Scrive nome di studento che dovrebbe cambiare</label>
+    <input type="text" id="cambiare" name="txt_cambiare" step="1" min="1" required><br><br>
+
+    <label for="nuovoNome">Scrive nuovo nome</label>
+    <input type="text" id="nuovoNome" name="cambiaNome" required><br><br>
+
+    <label for="nuovoCognome">Scrive nuovo cognome</label>
+    <input type="text" id="nuovoCognome" name="cambiaCognome" required><br><br>
+
+    <label for="nuoviVoti">Scrive nuova Media</label>
+    <input type="number" id="nuoviVoti" name="nuovaMedia" required><br><br>
+    <button type="button" onclick="cambiareDati()">Cambiare</button>
 </body>
 </html>

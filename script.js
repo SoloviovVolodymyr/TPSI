@@ -43,7 +43,13 @@ function classAverage() {
 }
 
 function cambiareDati() {
-        
+        var studentoCambiare = document.getElementById("cambiare");
+        var nuovoNome = document.getElementById("nuovoNome");
+        var nuovoCognome = document.getElementById("nuovoCognome");
+        var nuoviVoti = document.getElementById("nuoviVoti");
+        const index = students.findIndex(obj => obj.names === studentoCambiare);
+        students.splice(index, 3, nuovoNome, nuovoCognome, nuoviVoti);
+        console.log(students);
 }
 
 function eliminareStudento() {
