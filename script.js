@@ -43,13 +43,21 @@ function classAverage() {
 }
 
 function cambiareDati() {
-        var studentoCambiare = document.getElementById("cambiare");
-        var nuovoNome = document.getElementById("nuovoNome");
-        var nuovoCognome = document.getElementById("nuovoCognome");
-        var nuoviVoti = document.getElementById("nuoviVoti");
+        var studentoCambiare = document.getElementById("cambiare").value;
+        var nuovoNome = document.getElementById("nuovoNome").value;
+        var nuovoCognome = document.getElementById("nuovoCognome").value;
+        var nuoviVoti = document.getElementById("nuoviVoti").value;
         const index = students.findIndex(obj => obj.names === studentoCambiare);
-        students.splice(index, 3, nuovoNome, nuovoCognome, nuoviVoti);
+        students.splice(index, 1);
         console.log(students);
+        const student = {
+            names: nuovoNome,
+            surnames: nuovoCognome,
+            grade: nuoviVoti
+        }
+        students.push(student);
+
+        updateStudentSelect();
 }
 
 function eliminareStudento() {
