@@ -9,7 +9,6 @@ function addStudent() {
         grade: grades
     }
     students.push(student);
-    // console.log(JSON.stringify(student));
 
     updateStudentSelect();
 }
@@ -27,9 +26,9 @@ function updateStudentSelect() {
 }
 
 function showAverage() {
-    var message = document.getElementById("studentAverage");
-    var selectedStudent = document.getElementById("studentSelect").value;
-    message.innerHTML = JSON.stringify(students[selectedStudent]);
+    const selectedIndex = document.getElementById("studentSelect").value;
+    const selectedStudent = students[selectedIndex];
+    document.getElementById("studentAverage").innerHTML = "La media di " + selectedStudent.names + " " + selectedStudent.surnames + " è: " + selectedStudent.grade;
 }
 
 function classAverage() {
@@ -40,6 +39,8 @@ function classAverage() {
     }
     media = soma / students.length;
     document.getElementById("classAverage").innerHTML = "La media voti è:" + media;
+
+    
 }
 
 function cambiareDati() {
@@ -66,4 +67,8 @@ function eliminareStudento() {
     console.log(students);
     var x = document.getElementById("studentSelect");
     x.remove(parseInt(numeroEliminare));
+}
+
+function altaBassa() {
+
 }
